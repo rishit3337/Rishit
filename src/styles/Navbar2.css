@@ -1,0 +1,33 @@
+.side_navbar {
+  background-color: rgb(133, 104, 104);
+  width: max-content !important;
+  height: 60% !important;
+  padding: 1rem 5rem !important;
+  position: fixed;
+  top: 3.3rem;
+  left: 0;
+  transform: translateX(-101%);
+  z-index: 1000;
+  transition: transform 400ms ease-in-out , height 500ms ease-in-out ;
+}
+
+.side_navbar .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+@media (min-width : 768px){
+  .side_navbar , .side_navbar .links{
+    width: 100% !important;
+  }
+  .side_navbar{
+    height: 50% !important;
+    transform: translateY(-150%);
+  }
+  .side_navbar .links{
+    justify-content: space-around;
+  }
+}

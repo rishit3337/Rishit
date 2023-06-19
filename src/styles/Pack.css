@@ -1,0 +1,590 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.package-container {
+  margin-bottom: 3rem;
+  position: relative;
+  /* background-color: aqua; */
+}
+
+.left-side-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1em;
+  padding: 1rem;
+  margin-top: 2rem;
+  position: relative;
+  overflow: hidden;
+  /* background-color: blueviolet; */
+}
+
+.left-side-panel .package-desc {
+  order: -1;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1rem;
+  /* background-color: chartreuse; */
+}
+
+.left-side-panel .group-package-desc {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.left-side-panel .image-div {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.left-side-panel .image-div img {
+  width: 100%;
+  height: 100%;
+}
+
+.left-side-panel .package-image {
+  border-radius: 1rem;
+}
+
+.left-side-panel .add-to-cart {
+  padding: 1rem 1.5rem;
+  width: 11.125rem;
+  height: 3.625rem;
+  border-radius: 1rem;
+  background-color: #70908b;
+  color: white !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.left-side-panel .package-stars {
+  color: #ffc107;
+  font-size: 1.5rem;
+}
+
+.left-side-panel .package-name {
+  font-weight: 400;
+  font-size: 1.5rem;
+  width: 16rem;
+  height: 2.25rem;
+}
+
+.left-side-panel .package-price {
+  font-weight: 700;
+  font-size: 1.75rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.left-side-panel .about-package {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 0.2rem;
+  /* background-color: #70908b; */
+}
+
+.left-side-panel .about-package span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4; /* Adjust the number of lines you want to display */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.expand {
+  color: black !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.2rem;
+  cursor: pointer;
+  border-radius: 0 0 1rem 1rem;
+  /* background-color: #ffc107; */
+}
+
+.left-side-panel .all-right-panel .right-side-panel:first-child .expand,
+.left-side-panel .all-right-panel .right-side-panel:first-child .package-desc {
+  background-color: #e0f6f1;
+}
+
+.left-side-panel .expand #plus-search {
+  display: none;
+}
+
+.all-right-panel {
+  display: grid;
+  gap: 3rem;
+  overflow: hidden;
+  margin-top: 2rem;
+  /* background-color: #5217f4; */
+}
+
+.right-side-panel {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "image desc"
+    "empty expand";
+  column-gap: 0.5rem;
+  grid-template-rows: 6rem;
+  /* background-color: blue; */
+  padding: 0rem;
+}
+
+.right-side-panel .group-package-desc ~ div,
+.right-side-panel .about-package h2,
+.right-side-panel .about-package span {
+  display: none;
+}
+
+.right-side-panel .expand #plus-search {
+  display: block;
+}
+
+.right-side-panel .package-desc {
+  border-radius: 1rem 1rem 0 0;
+  width: 30rem;
+  height: 6rem;
+  /* background-color: #e0f6f1; */
+}
+
+.right-side-panel .group-package-desc {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "header price"
+    "stars empty";
+  padding: 1rem;
+  gap: 0.3rem;
+}
+
+.right-side-panel .group-package-desc .package-stars {
+  grid-area: stars;
+}
+
+.right-side-panel .group-package-desc .package-price {
+  grid-area: price;
+}
+
+.right-side-panel .group-package-desc .package-price {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.right-side-panel .expand {
+  padding: 0.2rem 1rem;
+}
+
+.right-side-panel .about-package {
+  grid-area: expand;
+  margin-top: 0rem;
+  gap: 0rem;
+  background-color: transparent;
+  position: sticky;
+  transform: translate(0, -0.2rem);
+  width: 30rem;
+  height: auto;
+}
+
+.right-side-panel .image-div {
+  grid-row: 1 / span 2;
+  display: flex;
+  justify-content: center;
+  width: 15.1625rem;
+  height: 8.225rem;
+}
+
+.all-right-panel .right-side-panel .image-div img {
+  display: block;
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.all-right-panel::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+.all-right-panel::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 2rem;
+}
+
+.all-right-panel::-webkit-scrollbar-thumb {
+  background-color: #70908b;
+  border-radius: 2em;
+}
+
+@media (min-width: 200px) and (max-width: 766.9px) {
+  .package-container .left-side-panel .all-right-panel {
+    display: none;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 768px) {
+  .left-side-panel .image-div {
+    order: -1;
+  }
+  .left-side-panel .product-name {
+    width: 21.6875rem;
+    height: 3.0625rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .left-side-panel {
+    /* background-color: red; */
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-areas:
+      "image description"
+      "empty about";
+    row-gap: 0rem;
+    grid-template-rows: 24rem;
+    /* align-items: end; */
+    /* position: relative; */
+  }
+  .left-side-panel .image-div {
+    grid-area: image;
+  }
+  .left-side-panel .about-package {
+    grid-area: description;
+    position: absolute;
+    bottom: 0;
+  }
+  .left-side-panel .group-package-desc {
+    gap: 0.5rem;
+  }
+
+  /* .left-side-panel .package-desc {
+    grid-area: description;
+    grid-row: 1 / span 3;
+  }
+
+  .right-side-panel .package-desc,
+  .right-side-panel .about-package {
+    width: 25rem;
+  }
+  .all-right-panel {
+    gap: 0rem;
+  } */
+
+  /* From here is the right side CSS */
+
+  .all-right-panel {
+    display: grid;
+    gap: 3rem;
+    /* background-color: #5217f4; */
+    overflow: hidden;
+    grid-area: empty;
+    grid-column: 1 / span 2;
+  }
+
+  .right-side-panel {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "image desc"
+      "empty expand";
+    column-gap: 0.5rem;
+    grid-template-rows: 6rem;
+    /* background-color: blue; */
+    padding: 0rem;
+  }
+
+  .right-side-panel .group-package-desc ~ div,
+  .right-side-panel .about-package h2,
+  .right-side-panel .about-package span {
+    display: none;
+  }
+
+  .right-side-panel .expand #plus-search {
+    display: block;
+  }
+
+  .right-side-panel .package-desc {
+    border-radius: 1rem 1rem 0 0;
+    width: 30rem;
+    height: 6rem;
+    /* background-color: #e0f6f1; */
+  }
+
+  .right-side-panel .group-package-desc {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "header price"
+      "stars empty";
+    padding: 1rem;
+    gap: 0.3rem;
+  }
+
+  .right-side-panel .group-package-desc .package-stars {
+    grid-area: stars;
+  }
+
+  .right-side-panel .group-package-desc .package-price {
+    grid-area: price;
+  }
+
+  .right-side-panel .group-package-desc .package-price {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .right-side-panel .expand {
+    padding: 0.2rem 1rem;
+  }
+
+  .right-side-panel .about-package {
+    grid-area: expand;
+    margin-top: 0rem;
+    gap: 0rem;
+    background-color: transparent;
+    position: sticky;
+    transform: translate(0, -0.2rem);
+    width: 30rem;
+    height: auto;
+  }
+
+  .right-side-panel .image-div {
+    grid-row: 1 / span 2;
+    display: flex;
+    justify-content: center;
+    width: 15.1625rem;
+    height: 8.225rem;
+  }
+
+  .all-right-panel .right-side-panel .image-div img {
+    display: block;
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (min-width: 1025px) {
+  .left-side-panel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "header about"
+      "description about";
+    column-gap: 1.5rem;
+    grid-template-rows: 20.5rem 12.5rem;
+    margin-bottom: 6.5rem;
+    /* background-color: #70908b; */
+  }
+  .left-side-panel .image-div {
+    grid-area: header;
+    max-width: 59rem;
+    max-height: 25.5rem;
+  }
+  .left-side-panel .image-div img {
+    max-width: 100%;
+    max-height: 25.5rem;
+    border-radius: 1rem;
+    object-fit: cover;
+  }
+  .left-side-panel .about-package {
+    grid-area: about;
+    height: 12.4rem;
+    /* background-color: #ffc107; */
+  }
+  .left-side-panel .package-desc {
+    grid-area: description;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5rem;
+    /* background-color: #e0f6f1; */
+  }
+  .expand {
+    display: flex;
+  }
+
+  /* From here is the right side CSS */
+
+  .all-right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow-y: auto;
+    grid-area: about;
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    height: 17rem;
+    margin-top: 0rem;
+    /* background-color: #17c8f4; */
+    /* grid-area: empty;
+    grid-column: 1 / span 2; */
+  }
+
+  .right-side-panel {
+    display: grid;
+    grid-template-columns: fit-content(9.5rem) 2fr;
+    grid-template-areas:
+      "image desc"
+      "empty expand";
+    column-gap: 1rem;
+    padding: 0rem;
+    /* overflow: hidden; */
+    /* grid-template-rows: 6rem; */
+    /* background-color: blue; */
+  }
+
+  .right-side-panel .package-name,
+  .right-side-panel .package-price {
+    font-size: 1.1rem;
+    width: max-content;
+  }
+
+  .right-side-panel .group-package-desc ~ div,
+  .right-side-panel .about-package h2,
+  .right-side-panel .about-package span {
+    display: none;
+  }
+
+  .right-side-panel .expand #plus-search {
+    display: block;
+  }
+
+  .right-side-panel .package-desc {
+    border-radius: 1rem 1rem 0 0;
+    width: max-content;
+    height: 6rem;
+    grid-area: desc;
+    margin-top: 0;
+    /* background-color: #e0f6f1; */
+  }
+
+  .right-side-panel .group-package-desc {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "header price"
+      "stars empty";
+    padding: 1rem;
+    gap: 0.3rem;
+  }
+
+  .right-side-panel .group-package-desc .package-stars {
+    grid-area: stars;
+  }
+
+  .right-side-panel .group-package-desc .package-price {
+    grid-area: price;
+  }
+
+  .right-side-panel .group-package-desc .package-price {
+    margin-left: 1.5rem;
+  }
+
+  .right-side-panel .expand {
+    padding: 0.2rem 1rem;
+  }
+
+  .right-side-panel .about-package {
+    grid-area: expand;
+    margin-top: 0rem;
+    gap: 0rem;
+    background-color: transparent;
+    transform: translate(0, -0.2rem);
+    height: auto;
+    /* position: sticky; */
+  }
+
+  .right-side-panel .image-div {
+    grid-area: image;
+    width: 9.5rem;
+    /* grid-row: 1 / span 2;
+    display: flex;
+    justify-content: center;
+    width: 15.1625rem;
+    height: 8.225rem; */
+  }
+
+  .all-right-panel .right-side-panel .image-div img {
+    display: block;
+    border-radius: 1rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /*  This is the previous css ! it is not correct ( that's why commented out ) */
+
+  /* .all-right-panel {
+    display: flex;
+    flex-direction: column;
+    width: 38rem;
+    grid-area: empty;
+    position: absolute;
+    right: -3.8rem;
+    bottom : -30%
+  }
+
+
+
+  .right-side-panel {
+    grid-template-columns: 13rem 25rem;
+    column-gap: 0rem;
+    padding: 1rem 1rem 0 1rem;
+    width: 38rem; // should be commented out
+  }
+
+  .all-right-panel .right-side-panel:first-child .package-desc,
+  .all-right-panel .right-side-panel:first-child .expand {
+    background-color: #e0f6f1;
+    column-gap: 0.5rem;
+  }
+
+  .right-side-panel .package-desc,
+  .right-side-panel .about-package {
+    width: 20rem;
+  }
+
+  .right-side-panel .image-div {
+    width: 13rem;
+  } */
+}
+
+/* The 1920 CSS */
+
+/* .all-right-panel {
+    display: flex;
+    flex-direction: column;
+    width: 58.25rem;
+    grid-area: empty;
+    position: absolute;
+    right: 1.5%;
+    bottom: -19%;
+    height: 34rem;
+    overflow-y: auto;
+  }
+  .all-right-panel .right-side-panel {
+    width: 100%;
+  }
+  .all-right-panel .right-side-panel:first-child .package-desc,
+  .all-right-panel .right-side-panel:first-child .expand {
+    background-color: #e0f6f1;
+  }
+  .all-right-panel .right-side-panel:first-child {
+    column-gap: 0.5rem;
+  } 
+  
+  @media (min-width: 1920px) {
+  .all-right-panel {
+    margin-top: 0rem;
+    height: 33.5rem;
+    max-height: 33.5rem;
+  }
+} 
+  
+*/

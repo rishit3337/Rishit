@@ -1,0 +1,410 @@
+.chair {
+  width: 100%;
+  max-width: 100%;
+  height: 37.5635rem;
+  max-height: 37.5635rem;
+  background-image: url("../assets/small.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 0 0 2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chair > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  height: 80%;
+  width: 82%;
+}
+
+.desc {
+  font-weight: 700;
+  font-size: 2.25rem;
+  text-align: center;
+}
+
+.sub-desc {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+.nav-link {
+  margin-top: 2.5rem;
+  padding-block: 1rem;
+}
+
+.button {
+  background-color: #70908b;
+  color: white !important;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  padding: 1rem 2.5rem;
+  border-radius: 1rem;
+}
+
+.category-button {
+  margin-top: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  cursor: pointer;
+}
+
+.carousel-images {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5rem;
+}
+
+.images {
+  width: 60%;
+  flex: 1;
+  padding: 1rem 1rem;
+}
+
+.images > .image-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.images > .image-container div {
+  width: 100%;
+  position: relative;
+  transition: 400ms ease-in-out;
+  overflow: hidden;
+}
+
+.images > .image-container div img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.images > .image-container div span {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: black;
+  border-radius: 1rem;
+  z-index: 4;
+  display: none;
+  font-size: 1em;
+  padding: 0.8em;
+}
+
+.images > .image-container div::before {
+  content: "";
+  width: 100%;
+  height: 99%;
+  position: absolute;
+  z-index: 3;
+  background-color: #173d4fb2;
+  opacity: 0;
+  transition: opacity 400ms ease-in-out;
+  border-radius: 0.9rem;
+}
+
+.images > .image-container div:hover::before {
+  opacity: 0.7;
+}
+
+.images > .image-container div:hover div {
+  overflow: visible;
+}
+
+.images > .image-container div:hover span {
+  display: inline;
+  cursor: pointer;
+  padding: 0.875rem 1.25rem;
+  border-radius: 0.375rem;
+  background-color: #e0eff6;
+  color: #07484a;
+}
+
+.images > .image-container .name {
+  pointer-events: none;
+}
+
+.images > .image-container .name {
+  position: absolute;
+  font-size: 2em;
+  color: white;
+  z-index: 4;
+  top: 12%;
+  text-align: center;
+  display: none;
+}
+
+.images > .image-container div:hover .name {
+  display: inline-block;
+}
+
+h2 {
+  margin-top: 1.2rem;
+}
+
+.image-slider {
+  display: flex;
+  background: url("../assets/chair.svg");
+  background-repeat: no-repeat;
+  padding-block: 2rem;
+  overflow: hidden;
+  gap: 2rem;
+}
+
+.image-slider .card {
+  translate: 3.5rem -1rem;
+}
+
+#slider #slider-arrows,
+.testimonial-slider #slider-arrows {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: flex-end;
+  padding-right: 0.8rem;
+}
+
+@media (min-width: 500px) {
+  .images > .image-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .category-button {
+    display: flex;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 767.99px) {
+  .carousel-images {
+    margin-top: 0rem;
+  }
+
+  .images > .image-container .name {
+    font-size: 1.5em;
+    top: 25%;
+    pointer-events: none;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 1919px) {
+  .image-slider {
+    background: url("../assets/products/chair_Tab.svg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 15.5rem;
+  }
+  .sub-desc {
+    text-align: left;
+    width: 100%;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 767.99px) {
+  .chair {
+    width: 100%;
+    max-width: 100%;
+    height: 35rem;
+    max-height: 37rem;
+    background-image: url("../assets/medium.svg");
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border-radius: 0 0 2rem 2rem;
+    justify-content: flex-start;
+  }
+
+  .chair > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 3.5rem;
+    padding-left: 2.5rem;
+    width: 100%;
+  }
+
+  .desc {
+    font-size: 2rem;
+    text-align: left;
+    line-height: 2.5rem;
+  }
+
+  .desc > span,
+  .hidden {
+    display: block;
+    width: max-content;
+  }
+
+  .sub-desc {
+    margin-top: 0.5rem;
+  }
+
+  .nav-link {
+    margin-top: 1rem;
+  }
+
+  .button {
+    border-radius: 0.4rem;
+    padding: 1rem 3.5rem;
+  }
+  .images > .image-container div span {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023.99px) {
+  .chair {
+    background-image: url("../assets/large.svg");
+    background-size: cover;
+    background-position: bottom;
+    height: 35rem;
+    max-height: 35rem;
+    justify-content: flex-start;
+  }
+  .chair > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 3rem;
+    padding-left: 2rem;
+  }
+
+  .desc {
+    text-align: left;
+  }
+
+  .desc,
+  .sub-desc,
+  .nav-link {
+    padding-left: 1rem;
+  }
+
+  .desc > span,
+  .hidden {
+    display: block;
+  }
+
+  .sub-desc {
+    margin-top: 1rem;
+  }
+
+  .nav-link {
+    margin-top: 3rem;
+  }
+
+  .button {
+    border-radius: 0.4rem;
+    padding: 1rem 3.5rem;
+  }
+  .images > .image-container div span {
+    font-size: 1.4rem;
+  }
+  .images > .image-container .name {
+    top: 23%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .chair {
+    background-image: url("../assets/xlarge.svg");
+    background-size: cover;
+    background-position: bottom;
+    height: 43.29999rem;
+    max-height: 44.29999rem;
+    justify-content: flex-start;
+  }
+  .chair > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 6rem;
+    padding-left: 4rem;
+  }
+
+  .desc {
+    text-align: left;
+  }
+
+  .desc,
+  .sub-desc,
+  .nav-link {
+    padding-left: 1rem;
+  }
+
+  .desc > span,
+  .hidden {
+    display: block;
+  }
+
+  .sub-desc {
+    margin-top: 1rem;
+  }
+
+  .nav-link {
+    margin-top: 3rem;
+  }
+
+  .button {
+    border-radius: 0.4rem;
+    padding: 1rem 3.5rem;
+  }
+  .images > .image-container div span {
+    font-size: 1.6rem;
+  }
+  .images > .image-container .name {
+    top: 23%;
+  }
+  #sp_package{
+    margin-top: 3rem;
+  }
+}
+
+
+@media (min-width: 200px) and (max-width: 1919px) {
+  .carousel-images > .container {
+    display: none;
+  }
+}
+
+@media (min-width: 1920px) {
+  .category,
+  .category-button {
+    display: none !important;
+  }
+
+  h2 {
+    margin-top: 3rem;
+    font-size: 4rem !important;
+    font-weight: 700 !important;
+  }
+
+  .image-slider {
+    background: url("../assets/products/chair_large.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 0;
+    padding-top: 30.9203539823009%;
+  }
+  .image-slider .card {
+    translate: 3.5rem -30rem;
+    min-width: 18.8125rem;
+    max-width: 18.8125rem;
+  }
+}
+
+@media (min-width : 1500px){
+  .images > .image-container .name {
+    top: 28%;
+  }
+}

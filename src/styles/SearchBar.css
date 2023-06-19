@@ -1,0 +1,30 @@
+.search-ham {
+  display: flex;
+  justify-content: space-evenly;
+  cursor: pointer;
+  padding: 0 0.4rem;
+  gap: 1rem;
+}
+
+.search {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.2rem;
+  padding-block: 0.8rem;
+  border-radius: 0.625rem;
+  flex: 1;
+  max-width: min(65%, 28.9375rem);
+}
+
+.search input[type="text"] {
+  border: none;
+  outline: none;
+  text-indent: 0.7rem;
+  background-color: #f0f0f0;
+  width: 70%;
+  height: 100%;
+  padding-block: 0.4rem;
+  line-height: 0.2rem;
+}
